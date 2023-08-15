@@ -1,5 +1,8 @@
 # nfsen-ng-docker
 
+This is not a real repo! Please never use it.
+use original one https://github.com/dircr/nfsen-ng-docker
+
 Docker setup for running nfsen-ng (Netflow visualizer) and nfdump (Netflow/Sflow collector) together with support for mutiple sources.
 
 ## Installation
