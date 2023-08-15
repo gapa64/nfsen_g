@@ -24,7 +24,7 @@ jobs:
           tags: ${{ secrets.DOCKER_USERNAME }}/nfsen_g:latest
       - shell: bash
         run: |
-          docker save -o nfsen_g.tgz nfsen_g:latest
+          /usr/bin/docker save -o nfsen_g.tgz nfsen_g:latest
       - name: Upload nfen_g tgz 
         uses: actions/upload-artifact@v3
         with:
