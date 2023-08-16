@@ -21,15 +21,7 @@ jobs:
           no-cache: false
           context: ./nfsen-ng/
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/nfsen_g:latest
-      - shell: bash
-        run: |
-          /usr/bin/docker save -o nfsen_g.tgz gaps64/nfsen_g:latest
-      - name: Upload nfen_g tgz 
-        uses: actions/upload-artifact@v3
-        with:
-          name: nfsen_g
-          path: nfsen_g.tgz
+          tags: ${{ secrets.DOCKER_USERNAME }}/nfsen_g:debug
       - name: Build and Push nfdump
         uses: docker/build-push-action@v2
         with:
@@ -37,18 +29,3 @@ jobs:
           context: ./nfdump/
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/nfdump_g:latest
-      - name: Upload math result for job 1
-        uses: actions/upload-artifact@v3
-        with:
-          name: homework
-          path: math-homework.txt
-      - name: Check out
-        uses: actions/checkout@v2
-      - shell: bash
-        run: |
-          /usr/bin/docker save -o nfdump_g.tgz gaps64/nfdump_g:latest
-      - name: Upload nfdump_g tgz 
-        uses: actions/upload-artifact@v3
-        with:
-          name: nfdump_g
-          path: nfdump_g.tgz

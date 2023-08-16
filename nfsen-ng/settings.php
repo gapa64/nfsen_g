@@ -49,6 +49,6 @@ $nfsen_config = array(
         'RRD' => array()
     ),
     'log' => array(
-        'priority' => LOG_INFO, // LOG_DEBUG is very talkative!
+        'priority' => LOG_DEBUG, // LOG_DEBUG is very talkative!
     )
 );
